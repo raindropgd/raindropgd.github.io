@@ -30,10 +30,8 @@ body{
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     background: url(images/bg_drops1.png) no-repeat top left fixed , url(images/rain_drop_bg.png) no-repeat top left fixed;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
+   
+    height: 100vh;
     background-size: cover, cover;
 }
 
