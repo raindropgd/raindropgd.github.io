@@ -12,7 +12,7 @@ only screen and ( min-resolution: 1.25dppx) {
 html {background: url(images/bg_drops1.png) no-repeat top left fixed , url(images/rain_drop_bg.png) no-repeat top left fixed;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    background-size: cover, cover;
+        background-size: cover, 100vw 100vh;
 }
 * {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -32,7 +32,7 @@ body{
     backface-visibility: hidden;
     
    
-    height: 100%;
+    height: 100vh;
     
 }
 
