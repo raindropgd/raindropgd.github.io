@@ -21,7 +21,7 @@ body{
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-        width: 100vw;
+        min-width: 100vw;
     font-family: 'Didact Gothic', sans-serif;
     color: white;
     font-size: 18px;
@@ -31,7 +31,7 @@ body{
     backface-visibility: hidden;
     background: url(images/bg_drops1.png) no-repeat top left fixed , url(images/rain_drop_bg.png) no-repeat top left fixed;
    
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover, cover;
 }
 
