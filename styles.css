@@ -29,13 +29,13 @@ body{
     -webkit-font-smoothing: subpixel-antialiased;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    background: url(images/bg_drops1.png)  no-repeat top center fixed , url(images/rain_drop_bg.png) no-repeat top left fixed ;
+    background:  url(images/rain_drop_bg.png) no-repeat top left fixed ;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
-    background-size: cover, cover;
+    background-size:  cover;
 }
 
 
