@@ -1,6 +1,7 @@
 $(function () {
+	$("body").hide();
 	jQuery(document).ready(function($) {
-		
+		$("body").fadeIn();
 		$("#logo").addClass('main_logo_svg_in_place');
 		
 		setTimeout(function () {
@@ -14,7 +15,32 @@ $(function () {
 			$(".get_started_btn").addClass('get_started_in_vision');
 			
 		},1500);
-
+		$("#get_started").bind('touchstart touchend', function() {
+        
+        $(this).toggleClass('get_started_btn_clicked');
+    });
 	
-	});
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	});//doc rdy
+
+
+
+
 });
