@@ -272,8 +272,13 @@ only screen and ( min-resolution: 1.25dppx) {
     border-radius: 6px;
     outline: none;
     color: white;
+
   
 
+}
+.text_input:focus{
+    background-color: rgba(256,256,256,0.3);
+    transition: 100ms;
 }
 .button_input{
     border-style: none;
