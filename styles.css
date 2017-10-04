@@ -281,12 +281,15 @@ only screen and ( min-resolution: 1.25dppx) {
 }
 .text_input:focus{
     background-color: rgba(256,256,256,0.3);
+    -webkit-transition: 100ms;
+    -o-transition: 100ms;
     transition: 100ms;
 }
 .button_input{
     border-style: none;
     background-color: #1cbbb4;
-
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
         -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
     color: white;
