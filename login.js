@@ -10,10 +10,7 @@ $(function () {
 			$(".rains_container").addClass('rains_container_start_rain');
 
 		},1000);
-$("input").click(function(event) {
-  var filter_scroll_top = $(this).offset().top;
-  $("html, body").animate({ scrollTop: filter_scroll_top-45 }, 300);
-});
+
 
 
 		

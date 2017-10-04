@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html class="login_html">
 
 <head>
     <title>Rain Drop - Log In</title>
-    <meta charset="utf-8" name="viewport" content="width=320, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
 
     <script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
     
@@ -17,7 +18,7 @@
 
 </head>
 <body>
-	<div class="rains_container"></div>
+	<div class="rains_container login_rains_container"></div>
 
 <div class="main_logo_container login_logo_container">
 	<img src="images/RainDropLogoSVG.svg" class="main_logo_svg medium_logo"  id="logo">
@@ -34,7 +35,8 @@
 			<p class="validation_message" id="validation_message">Wrong Email or Passrowd</p>
 		</div>
 		<input type="submit" name="submit_btn" class="input button_input submit_input" id="submit_input" value="Drop" >
-
+		<p class=" dont_have_registration">Don't have registration? <a href="registration.html">Sing Up</a></p>
+		<p class="dont_have_registration forg_pass"><a href="">Forgot password?</a></p>
 
 	</form>
 
