@@ -19,52 +19,80 @@ $(function () {
         $(this).toggleClass('button_input_clicked');
     });
 
-		$("#submit_input").bind("click", Log_In_validation);
+		//$("#submit_input").bind("click", Log_In_validation);
 
 
 
 
 
 	$("#validation_message").hide();
-	});//doc redy
+
+});//doc redy
 
 
 
 
 
 
-function validateEmail(email) {
-  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(email);
+
+
+var error_pass = false;
+var error_email = false;
+
+
+
+$("#email_input").focusout(function  () {
+	check_email();
+});
+$("#password_input").focusout(function  () {
+	check_pass();
+});
+
+
+
+
+function check_email() {
+var EmailStructure = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+ var email_value = $("#email_input").val();
+	
+	if ( !EmailStructure.test(email_value) ) {	
+$("#validation_message").html("Email is not valid");
+$("#validation_message").fadeIn();
+error_email = true;
+	}else{
+$("#validation_message").hide();
+	}
 }
 
-function Log_In_validation() {
-  $("#validation_message").hide();
-  var ret = true;
-  
-  var email = $("#email_input").val();
-  var pass = $("#pass_input").val();
-  if (!validateEmail(email) ) {
-	$("#validation_message").fadeIn();
-	console.log("mailerror");
-    ret = false;
-  }
-  if ( pass == "") {
-	$("#validation_message").fadeIn();
-	console.log("passerror");
-    ret = false;
-  }
-
-
-
-  return ret;
+function check_pass() {
+var pass_length = $("#password_input").val().length;
+ if(pass_length < 5){
+$("#validation_message").html("Must be longer than 5 charecters");
+$("#validation_message").fadeIn();
+error_pass = true;
+ }else{
+$("#validation_message").hide();
+ }
 }
 
 
 
+$("#login_form").submit(function  () {
 
+error_pass = false;
+error_email = false;
 
+check_pass();
+check_email();
 
+if ( error_pass==false  && error_email==false) {
+return true;
+}else{
+	$("#validation_message").html("Wrong Email or Passrowd");
+	$("#validation_message").fadeIn();
+return false;
+}
+});
 
 
 

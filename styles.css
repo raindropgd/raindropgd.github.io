@@ -273,7 +273,7 @@ only screen and ( min-resolution: 1.25dppx) {
     outline: none;
     color: white;
   
-  
+
 }
 .button_input{
     border-style: none;
@@ -302,7 +302,7 @@ only screen and ( min-resolution: 1.25dppx) {
     border-radius: 20px;
     text-align: center;
     width: 75%;
-    font-size: 14px;
+    font-size: 15px;
     
 }
 .dont_have_registration{
@@ -315,7 +315,7 @@ only screen and ( min-resolution: 1.25dppx) {
     color: skyblue;
 }
 .forg_pass{
-font-size: 12px;
+font-size: 14px;
 }
 
 
