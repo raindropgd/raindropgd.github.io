@@ -10,10 +10,13 @@ only screen and ( min-resolution: 1.25dppx) {
 }
 @media only screen and (min-width: 320px) {
     html {
-        background: url(images/rain_drop_bg.png) no-repeat top left fixed;
+        background: url(images/rain_drop_bg.png) no-repeat top left;
+        background-attachment: fixed;
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
         background-size: 100vw 100vh;
+         overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
     }
     .login_html1{
         background-size: 100vw 670px;
