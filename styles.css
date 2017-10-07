@@ -345,6 +345,7 @@ background-size: 20px 20px;
     transition: 100ms;
 }
 .button_input{
+     -webkit-appearance: none;
     border-style: none;
     background-color: #1cbbb4;
    font-family: "Open Sans", arial;
