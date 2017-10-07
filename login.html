@@ -17,20 +17,24 @@
   
 
 </head>
-<body>
+<body class="static_body">
 	<div class="rains_container login_rains_container"></div>
 
 <div class="main_logo_container login_logo_container">
 	<img src="images/RainDropLogoSVG.svg" class="main_logo_svg medium_logo"  id="logo">
 </div>
 <p class="h1 login_h1" id="h1">Rain Drop</p>
-<p class="h2 login_h2" id="h2">Join our community and find you path in life</p>
-
+<p class="h2 login_h2" id="h2">Join us and swim in the big river</p>
+<p class="login_heading">Login</p>
 <div class="form_container">
 	<form class="login_form" method="POST" autocomplete="off" name="login_form" id="login_form">
-		<input type="email" placeholder="Email" name="email" class="input text_input email_input" id="email_input">
+		<input type="email" placeholder="Email" name="email" class="input text_input email_input " id="email_input"> 
+		<span class="succsess_span_after_input span_after_email"></span>
 
-		<input type="password" placeholder="Password" name="password" class="input text_input password_input" id="password_input">
+		<input type="password" placeholder="Password" name="password" class="input text_input password_input" id="password_input"> 
+		<span class="succsess_span_after_input span_after_password"></span>
+
+
 		<div class="erroe_msg_container">
 			<p class="validation_message" id="validation_message"></p>
 		</div>

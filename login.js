@@ -56,10 +56,15 @@ var EmailStructure = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".
  var email_value = $("#email_input").val();
 	
 	if ( !EmailStructure.test(email_value) ) {	
+		$(".span_after_email").removeClass('ok_tick_is_visible');
+		
 $("#validation_message").html("Email is not valid");
 $("#validation_message").fadeIn();
+
 error_email = true;
 	}else{
+		$(".span_after_email").addClass('ok_tick_is_visible');
+	
 $("#validation_message").hide();
 	}
 }
@@ -67,10 +72,14 @@ $("#validation_message").hide();
 function check_pass() {
 var pass_length = $("#password_input").val().length;
  if(pass_length < 5){
-$("#validation_message").html("Must be longer than 5 charecters");
+ 
+  	$(".span_after_password").removeClass('ok_tick_is_visible');
+$("#validation_message").html("Between 5 and 20 chars");
 $("#validation_message").fadeIn();
 error_pass = true;
  }else{
+ 	
+ 	$(".span_after_password").addClass('ok_tick_is_visible');
 $("#validation_message").hide();
  }
 }
