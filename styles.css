@@ -376,6 +376,7 @@ background-size: 20px 20px;
 }
 .or_register_input{
    border: 2px solid #2edcd4;
+   width: 100%;
     background-color: transparent;
 }
 .or_register_input a{
