@@ -97,9 +97,9 @@ only screen and ( min-resolution: 1.25dppx) {
         -webkit-transition: opacity 1s;
         -o-transition: opacity 1s;
         transition: opacity 1s;
-        opacity: 0.5;
-        -webkit-animation: rain linear 4s infinite;
-        animation: rain linear 4s infinite;
+        opacity: 0.3;
+        -webkit-animation: rain linear 5s infinite;
+        animation: rain linear 5s infinite;
     }
     @-webkit-keyframes rain {
         0% {
@@ -337,7 +337,7 @@ background-size: 20px 20px;
 
 
 .text_input{
-    font-size: 15px;
+    font-size: 16px;
 }
 
 
@@ -373,6 +373,10 @@ background-size: 20px 20px;
 .or_register_input{
    border: 2px solid #2edcd4;
     background-color: transparent;
+}
+.or_register_input a{
+    text-decoration: none;
+    color: #2edcd4;
 }
 .validation_message{
     margin: 0;
