@@ -192,7 +192,7 @@ only screen and ( min-resolution: 1.25dppx) {
         transition: all 1s ease;
     }
     .button {
-        border-radius: 7px;
+        border-radius: 3px;
         background-color: #20e0d8;
         -webkit-box-shadow: 0 5px 7px rgba(0, 0, 0, 0.59);
         box-shadow: 0 5px 7px rgba(0, 0, 0, 0.59);
@@ -287,14 +287,15 @@ only screen and ( min-resolution: 1.25dppx) {
 }
 .input{
     margin: 10px 0 10px 0;
-    padding: 0px 10px;
+    padding: 0px 33px;
     height: 40px;
     border: solid 1px #fff;
     background-color: rgba(256,256,256,0.1);
-    border-radius: 6px;
+    border-radius: 3px;
     outline: none;
     color: white;
     position: relative;
+    -webkit-appearance: none;
 }
 
 
@@ -319,8 +320,8 @@ only screen and ( min-resolution: 1.25dppx) {
 .span_after_email::after,
 .span_after_password::after{
 content: "";
-top: -40px;
-    right: 10px;
+    top: -42px;
+    left: 7px;
 opacity: 0;
 transition: all 0.3s ease-out;
     transform: rotate(-90deg);
@@ -335,7 +336,9 @@ background-size: 20px 20px;
 
 
 
-
+.text_input{
+    font-size: 16px;
+}
 
 
 .text_input:focus{
@@ -351,21 +354,25 @@ background-size: 20px 20px;
    font-family: "Open Sans", arial;
     letter-spacing: 1px;
     font-weight: 200;
-        -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
     color: white;
 }
 .button_input_clicked{
         -webkit-transition: 0.1s;
         -o-transition: 0.1s;
         transition: 0.1s;
-        -webkit-transform: translateY(-1px);
-        -ms-transform: translateY(-1px);
-        transform: translateY(-1px);
+        -webkit-transform: translateY(1px);
+        -ms-transform: translateY(1px);
+        transform: translateY(1px);
         background-color: #1da59f;
         color: #cdcdcd;
-        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.38);
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.38);
+        -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+.or_register_input{
+   border: 2px solid #2edcd4;
+    background-color: transparent;
 }
 .validation_message{
     margin: 0;
@@ -390,10 +397,31 @@ background-size: 20px 20px;
 font-size: 14px;
 }
 
+.or_container p{
+ text-align: center;
+ margin: 20px 0 10px;
+ position: relative;
+ font-size: 13px;
+}
+.or_container p:before{
+    content: "";
+    top: 8px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.67);
+}
 
-
-
-
+.or_container p:after{
+    content: "";
+    top: 8px;
+    right: 0;
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.67);
+}
 
 
 

@@ -41,10 +41,10 @@ var error_email = false;
 
 
 
-$("#email_input").focusout(function  () {
+$("#email_input").bind('input propertychange',function  () {
 	check_email();
 });
-$("#password_input").focusout(function  () {
+$("#password_input").bind('input propertychange',function  () {
 	check_pass();
 });
 
