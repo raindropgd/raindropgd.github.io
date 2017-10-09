@@ -272,7 +272,7 @@ only screen and ( min-resolution: 1.25dppx) {
 .erroe_msg_container{
     height: 20px;
 }
-.login_form{
+.login_form,.reg_form{
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -283,7 +283,7 @@ only screen and ( min-resolution: 1.25dppx) {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 80%;
+   width: 90vw;
 }
 .input{
     margin: 10px 0 10px 0;
@@ -306,19 +306,23 @@ only screen and ( min-resolution: 1.25dppx) {
     position: relative;
   
 }
+
+.span_after_password_re.ok_tick_is_visible:after,
+.span_after_user_name.ok_tick_is_visible:after,
+.span_after_password.ok_tick_is_visible:after,
 .span_after_email.ok_tick_is_visible:after{
     opacity: 1;
     transform: rotate(0deg);
     transition: all 0.3s ease-out;
 }
-.span_after_password.ok_tick_is_visible:after{
-    opacity: 1;
-    transform: rotate(0deg);
-    transition: all 0.3s ease-out;
-}
+
+
+
 
 .span_after_email::after,
-.span_after_password::after{
+.span_after_password::after,
+.span_after_password_re::after,
+.span_after_user_name::after{
 content: "";
     top: -42px;
     left: 7px;
@@ -336,7 +340,7 @@ background-size: 20px 20px;
 
 
 
-.text_input{
+.input{
     font-size: 16px;
 }
 
@@ -426,23 +430,155 @@ font-size: 14px;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.67);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*logIN*/
+
+
+
+
+/*registration*/
+
+.header_container_reg{
+ display: flex;
+ position: relative;
+ top:0;
+ width: 100vw;
+ height: 100px;
+}
+.small_side_logo{
+width: 50px;
+height: 50px;
+margin-left: 25px;
+margin-top: 25px;
+  opacity: 0;
+transform: rotate(90deg);
+transition: all 1000ms ease; 
+}
+.small_side_logo_is_visible{
+    opacity: 1;
+transform: rotate(0deg);
+transition: all 1000ms ease; 
+}
+.header_text_wraper{
+    padding-top: 20px;
+
+}
+.reg_h1, .reg_h2{
+    text-align: left;
+    padding-left: 20px;
+    
+}
+.reg_h1{
+    font-size: 16px;
+}
+.reg_h2{
+font-size: 11px;
+}
+.redistration_heading{
+    margin: 20px 0 20px;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.registration_text_input{
+    margin: 3px 0px;
+}
+.registration_validate_error_message{
+
+}
+
+.spans_after_inputs_registration:after{
+
+    top: -35px;
+    left: 6px;
+
+}
+.terms_service_wraper{
+    display: flex;
+    justify-content: center;
+}
+.control {
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 29px;
+    margin-bottom: 4px;
+    padding-top: 5px;
+    cursor: pointer;
+    width: 35vw;
+    font-size: 12px;
+}
+    .control input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+.control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #e6e6e6;
+    border: 0px solid #000000;
+}
+.control-radio .control_indicator {
+    border-radius: undefined%;
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+    background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+    background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+    background: #0e6647d;
+}
+.control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control input:checked ~ .control_indicator:after {
+    display: block;
+}
+.control-checkbox .control_indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+    border-color: #7b7b7b;
+}
+
+
+/*registration*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

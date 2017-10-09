@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="login_html">
+
+<head>
+    <title>Rain Drop - Log In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+
+    <script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Didact+Gothic|Source+Sans+Pro:600" rel="stylesheet">
+    
+    <script src="registration.js"></script>
+
+  
+
+</head>
+<body class="static_body">
+
+<div class="rains_container"></div>
+
+<div class="header_container_reg">
+
+	<div class="header_logo_wraper"><img src="images/RainDropLogoSVG.svg"
+id="logo" class="small_side_logo"></div>
+
+<div class="header_text_wraper"><p class="h1 reg_h1 " id="h1">Rain Drop</p>
+<p class="h2 reg_h2" id="h2">Join us and swim in the big river</p></div>
+
+</div>
+
+<p class="login_heading redistration_heading">Registration</p>
+
+<div class="form_container">
+	<form class="reg_form" method="POST" autocomplete="off" name="reg_form" id="reg_form">
+
+	<input type="text" name="user_name" id="user_name_input" class="input text_input user_name_input registration_text_input" placeholder="Your name">
+	<span class="succsess_span_after_input span_after_user_name spans_after_inputs_registration"></span>
+		<div class="erroe_msg_container">
+			<p class="validation_message registration_validate_error_message" id="name_error_message"></p>
+		</div>
+	<input type="email" name="email_input" id="email_input" class="input text_input email_input registration_text_input" placeholder="Email">
+	<span class="succsess_span_after_input span_after_email spans_after_inputs_registration"></span>
+		<div class="erroe_msg_container">
+			<p class="validation_message registration_validate_error_message" id="email_error_message"></p>
+		</div>
+	<input type="password" name="password_input" id="password_input" class="input text_input password_input registration_text_input" placeholder="Password">
+	<span class="succsess_span_after_input span_after_password spans_after_inputs_registration"></span>
+		<div class="erroe_msg_container">
+			<p class="validation_message registration_validate_error_message" id="password_error_message"></p>
+		</div>
+	<input type="password" name="password_re_input" id="password_re_input" class="input text_input password_re_input registration_text_input" placeholder="Confirm Password">
+	<span class="succsess_span_after_input span_after_password_re spans_after_inputs_registration"></span>
+		<div class="erroe_msg_container">
+			<p class="validation_message registration_validate_error_message" id="password_confirm_error_message"></p>
+		</div>
+
+
+
+
+
+	<input type="submit" name="submit_btn" class="input button_input submit_input" id="submit_input" value="Registration" >
+	<div class="terms_service_wraper">
+	<label class="control control-checkbox">I agree to terms<input type="checkbox" checked="checked" />
+        <div class="control_indicator"></div></label></div>
+        
+            
+    
+	</form>
+</div>
+
+
+
+
+
+
+
+<div style="height: 100px;"></div>
+	<footer class="login_foter">
+		<p class="cr">Copyright &copy; Georgi Dimitranov</p>
+	</footer>	
+</body>
+</html>
