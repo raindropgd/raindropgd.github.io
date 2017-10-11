@@ -15,12 +15,11 @@ setTimeout(function () {
 
 
 
-
-
 $("#name_error_message").hide();
 	$("#email_error_message").hide();
 	$("#password_error_message").hide();
 	$("#password_confirm_error_message").hide();
+	$("#hidden_reg_button").hide();
 
 
 
@@ -60,11 +59,13 @@ function check_name() {
 		if (name_length < 5 || name_length >20) {
 			$(".span_after_user_name").removeClass('ok_tick_is_visible');
 	$("#name_error_message").html("Shoud be betwen 5 and 20 chars");
-	$("#name_error_message").show();
+	$("#name_error_message , #submit_input").show();
+	$("#hidden_reg_button").hide();
 	error_name = true;
 		}else{
+$("#hidden_reg_button").show();
 			$(".span_after_user_name").addClass('ok_tick_is_visible');
-			$("#name_error_message").hide();
+			$("#name_error_message , #submit_input").hide();
 			
 		}
 }
@@ -75,11 +76,13 @@ function check_name() {
 			if ( !EmailStructure.test(email_value) ) {	
 		$(".span_after_email").removeClass('ok_tick_is_visible');
 		$("#email_error_message").html("Email is not valid");
-		$("#email_error_message").show();
+		$("#email_error_message , #submit_input").show();
+		$("#hidden_reg_button").hide();
 		error_email = true;
 			}else{
+				$("#hidden_reg_button").show();
 				$(".span_after_email").addClass('ok_tick_is_visible');
-		$("#email_error_message").hide();
+		$("#email_error_message , #submit_input").hide();
 			}
 }
 
@@ -89,11 +92,13 @@ function check_pass() {
 		 if(pass_length < 5){
 		$(".span_after_password").removeClass('ok_tick_is_visible');
 		$("#password_error_message").html("Must be longer than 5 charecters");
-		$("#password_error_message").show();
+		$("#password_error_message , #submit_input").show();
+		$("#hidden_reg_button").hide();
 		error_pass = true;
 		 }else{
+		 	$("#hidden_reg_button").show();
 		 	$(".span_after_password").addClass('ok_tick_is_visible');
-		$("#password_error_message").hide();
+		$("#password_error_message , #submit_input").hide();
 		 }
 }
 
@@ -106,11 +111,13 @@ function check_repass(){
 				error_repass = true;
 			$(".span_after_password_re").removeClass('ok_tick_is_visible');
 			$("#password_confirm_error_message").html("Passwords dont match");
-		$("#password_confirm_error_message").show();
+		$("#password_confirm_error_message, #submit_input").show();
+		$("#hidden_reg_button").hide();
 	
 		}else{
+			$("#hidden_reg_button").show();
 			$(".span_after_password_re").addClass('ok_tick_is_visible');
-			$("#password_confirm_error_message").hide();
+			$("#password_confirm_error_message , #submit_input").hide();
 		}
 }
 
@@ -129,6 +136,7 @@ check_email();
 
 if ( error_pass==false  && error_email==false && error_name == false && error_repass == false) {
 return true;
+
 }else{
 	console.log("error")
 return false;

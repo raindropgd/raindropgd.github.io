@@ -34,7 +34,7 @@ id="logo" class="small_side_logo"></div>
 <p class="login_heading redistration_heading">Registration</p>
 
 <div class="form_container">
-	<form class="reg_form" method="POST" action="reg_done.html" autocomplete="off" name="reg_form" id="reg_form">
+	<form class="reg_form" method="POST" autocomplete="off" name="reg_form" id="reg_form">
 
 	<input type="text" name="user_name" id="user_name_input" class="input text_input user_name_input registration_text_input" placeholder="Your name">
 	<span class="succsess_span_after_input span_after_user_name spans_after_inputs_registration"></span>
@@ -60,9 +60,15 @@ id="logo" class="small_side_logo"></div>
 
 
 
+<input type="submit" name="submit_btn" class="input button_input submit_input" id="submit_input" value="Registration" ></a>
 
-	<input type="submit" name="submit_btn" class="input button_input submit_input" id="submit_input" value="Registration" >
+
+<div class="div_flex_center registration_submit_a">
+	<a href="reg_done.html"><input type="button" name="hiddenButton" class="input button_input submit_input" id="hidden_reg_button" value="Registration"></a>
+</div>
+
 	<div class="terms_service_wraper">
+
 	<label class="control control-checkbox">I agree to terms<input type="checkbox" checked="checked" />
         <div class="control_indicator"></div></label></div>
         

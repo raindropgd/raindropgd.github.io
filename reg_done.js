@@ -13,13 +13,26 @@ setTimeout(function () {
 
 		},1000);
 
+
+
+
+setTimeout(function () {
+		$(".reg_done_well_done").addClass('transitioned_up_visible');
+},1400);
+setTimeout(function () {
+		$(".reg_done_message").addClass('transitioned_up_visible');
+},1600);
+
+
+
 setTimeout(function () {
 	$(".big_tick_container").addClass('big_tick_animation_class');
-},1200);
+},2000);
 
 setTimeout(function () {
 	$(".go_to_login_btn").addClass('go_to_login_btn_is_visible');
-},1500);
+},2100);
+
 
 
 });

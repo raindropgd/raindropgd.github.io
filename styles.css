@@ -313,7 +313,11 @@ only screen and ( min-resolution: 1.25dppx) {
 .span_after_password.ok_tick_is_visible:after,
 .span_after_email.ok_tick_is_visible:after{
     opacity: 1;
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 
@@ -328,8 +332,12 @@ content: "";
     top: -42px;
     left: 7px;
 opacity: 0;
+-webkit-transition: all 0.3s ease-out;
+-o-transition: all 0.3s ease-out;
 transition: all 0.3s ease-out;
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
 z-index: 200;
 position: absolute;
 background-image: url("images/ok_tick.svg");
@@ -440,6 +448,8 @@ font-size: 14px;
 /*registration*/
 
 .header_container_reg{
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
  position: relative;
  top:0;
@@ -452,12 +462,20 @@ height: 50px;
 margin-left: 25px;
 margin-top: 25px;
   opacity: 0;
-transform: rotate(90deg);
+-webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+-webkit-transition: all 1000ms ease;
+-o-transition: all 1000ms ease;
 transition: all 1000ms ease; 
 }
 .small_side_logo_is_visible{
     opacity: 1;
-transform: rotate(0deg);
+-webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+-webkit-transition: all 1000ms ease;
+-o-transition: all 1000ms ease;
 transition: all 1000ms ease; 
 }
 .header_text_wraper{
@@ -494,9 +512,16 @@ font-size: 11px;
     left: 6px;
 
 }
+.registration_submit_a a input{
+    width: 90vw;
+}
 .terms_service_wraper{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .control {
     font-family: arial;
@@ -545,7 +570,8 @@ font-size: 11px;
     pointer-events: none;
 }
 .control_indicator:after {
-    box-sizing: unset;
+    -webkit-box-sizing: unset;
+            box-sizing: unset;
     content: '';
     position: absolute;
     display: none;
@@ -560,7 +586,9 @@ font-size: 11px;
     height: 8px;
     border: solid #ffffff;
     border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 .control-checkbox input:disabled ~ .control_indicator:after {
     border-color: #7b7b7b;
@@ -575,8 +603,12 @@ font-size: 11px;
     margin-bottom: 50px;
 }
 .div_flex_center{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .go_to_login_btn_container a{
  width: 80vw;
@@ -584,9 +616,15 @@ font-size: 11px;
 .well_done_container{
     height: initial;
     width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items:center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
 
 }
 .reg_done_well_done{
@@ -609,12 +647,18 @@ font-size: 11px;
 color: #eee;
 position: relative;
 background-color: rgba(252, 252, 252, 0.22);
-transform: translateY(30px);
+-webkit-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+        transform: translateY(30px);
     opacity: 0;
 }
 .go_to_login_btn_is_visible{
-transform: translateY(0px);
+-webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+        transform: translateY(0px);
     opacity: 1;
+    -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1.01);
+    -o-transition: all 1s cubic-bezier(0, 0, 0, 1.01);
     transition: all 1s cubic-bezier(0, 0, 0, 1.01)
 }
 .go_to_login_btn:after{
@@ -635,49 +679,92 @@ transform: translateY(0px);
     width: 100vw; 
     height: 80px;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
 
 }
 .big_tick_animation_class:after{
     content: "";
     top: 20px;
-    background-image: url("images/ok_tick.svg");
+    background-image: url(images/ok_tick.svg);
     background-size: 50px;
-    width: 50px;
+    width: 100vw;
     height: 50px;
-     
-    transform:scale(0,0) rotate(0deg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    -webkit-transform: scale(0,0) rotate(0deg);
+        -ms-transform: scale(0,0) rotate(0deg);
+            transform: scale(0,0) rotate(0deg);
     position: absolute;
+    -webkit-animation: big_tick_in_place 2800ms ease 0s infinite;
+            animation: big_tick_in_place 2800ms ease 0s infinite;
+}
+
+@-webkit-keyframes big_tick_in_place{
+    0%,100%{
+ 
+    -webkit-transform:scale(0.5) rotate(10deg);
+ 
+            transform:scale(0.5) rotate(10deg);
+    }
     
-    animation:  big_tick_in_place 2800ms ease 0s infinite;
+    50%{
+         
+    -webkit-transform:scale(1) rotate(-10deg);
+         
+            transform:scale(1) rotate(-10deg);
+    }
+    
 }
 
 @keyframes big_tick_in_place{
     0%,100%{
  
-    transform:scale(0.5) rotate(10deg);
+    -webkit-transform:scale(0.5) rotate(10deg);
+ 
+            transform:scale(0.5) rotate(10deg);
     }
     
     50%{
          
-    transform:scale(1) rotate(-10deg);
+    -webkit-transform:scale(1) rotate(-10deg);
+         
+            transform:scale(1) rotate(-10deg);
     }
     
 }
 .big_tick_animation_class:before{
     content: "";
     top: 20px;
-    background-color: #2edcd4;
+    background-image: url(images/ok_tick.svg);
     opacity: 0.2;
     background-size: 50px;
-    width: 50px;
+    width: 100vw;
     height: 50px;
+    background-position: top center;
+    background-repeat: no-repeat;
 
     border-radius: 50%;
     position: absolute;
-    animation:big_tick_back_pulse 2800ms ease 0s infinite;
+    -webkit-animation:big_tick_back_pulse 2800ms ease 0s infinite;
+            animation:big_tick_back_pulse 2800ms ease 0s infinite;
+}
+@-webkit-keyframes big_tick_back_pulse{
+0%,100%{
+opacity: 0.2;
+
+}
+50%{
+opacity: 0.6;
+
+}
+
+
 }
 @keyframes big_tick_back_pulse{
 0%,100%{
@@ -696,8 +783,21 @@ opacity: 0.6;
 
 
 
-
-
+.transitioned_up{
+    -webkit-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0;
+}
+.transitioned_up_visible{
+-webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+        transform: translateY(0px);
+    opacity: 1;
+    -webkit-transition: all 1000ms ease-out;
+    -o-transition: all 1000ms ease-out;
+    transition: all 1000ms ease-out;
+}
 
 
 
