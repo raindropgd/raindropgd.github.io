@@ -107,7 +107,7 @@ function check_repass(){
  
 	 var password_value = $("#password_input").val();
 	 var rep_password_value = $("#password_re_input").val();
-		if (password_value != rep_password_value) {
+		if (password_value != rep_password_value || (password_value =="" && rep_password_value=="" && password_value == rep_password_value)) {
 				error_repass = true;
 			$(".span_after_password_re").removeClass('ok_tick_is_visible');
 			$("#password_confirm_error_message").html("Passwords dont match");
