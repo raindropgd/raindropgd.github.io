@@ -58,7 +58,17 @@ only screen and ( min-resolution: 1.25dppx) {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-
+.full_stresh_body{
+    height: initial;
+    overflow-y: scroll;
+    background-size: 100% 100%;
+background-image: none;
+background: #83dfe2;
+background: -moz-linear-gradient(top, #83dfe2 0%, #328fc1 100%);
+background: -webkit-linear-gradient(top, #83dfe2 0%,#328fc1 100%);
+background: linear-gradient(to bottom, #83dfe2 0%,#328fc1 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83dfe2', endColorstr='#328fc1',GradientType=0 );
+}
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #eee;
 }
@@ -802,6 +812,249 @@ opacity: 0.6;
 
 
 
+
+/*make_profile*/
+
+.bm_container{
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.bm_container a{
+    color: gray;
+    text-decoration:none;
+       color: #0e90de;
+    font-size: 10px;
+
+    font-family: "Open Sans", sans-serif;
+}
+.bm_single_div{
+    width: 25vw;
+    position: relative;
+    height: 40px;
+    background-color: #fff;
+    box-sizing: border-box;
+       padding-top: 40px;
+    text-align: center;
+    vertical-align: bottom;
+    border: none;
+    
+}
+
+
+
+
+.bm_jobs,
+.bm_myo,
+.bm_prof,
+.bm_set,
+.bm_jobs_off,
+.bm_myo_off,
+.bm_prof_off,
+.bm_set_off{
+    background-size: 30px; 
+    background-position: center 5px;
+    background-repeat: no-repeat;
+}
+
+.bm_myo{
+    background-image: url("images/bm_img/fly_svg.svg");
+   
+}
+.bm_myo_off{
+    background-image: url("images/bm_img/fly_svg_2.svg");
+}
+.bm_jobs{
+    background-image: url("images/bm_img/doc_svg.svg");
+    
+}
+.bm_jobs_off{
+    background-image: url("images/bm_img/doc_svg_2.svg");
+    
+}
+.bm_prof{
+    background-image: url("images/bm_img/profile_svg.svg");
+}
+.bm_prof_off{
+    background-image: url("images/bm_img/profile_svg_2.svg");
+}
+
+
+.bm_set{
+    background-image: url("images/bm_img/options_svg.svg");
+}
+.bm_set_off{
+    background-image: url("images/bm_img/options_svg_2.svg");
+}
+
+
+
+
+
+header{
+    height: 40px;
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.79);
+    top: 0;
+    left: 0;
+}
+
+
+.hamburger_nav{
+    float: left;
+    width: 40px;position: absolute;
+    height: 40px;
+    margin-left: 10px;
+    display: flex;
+        z-index: 100;
+    justify-content: center;
+    align-items: center;
+    }
+.nav_span{
+width: 30px;
+height: 3px;
+border-radius: 2px;
+background: skyblue;
+position: relative;
+
+}
+.nav_span:before,.nav_span:after{
+    position: absolute;
+    
+    width: 20px;
+    content: "";
+
+    height: 3px;
+    border-radius: 2px;
+    background: skyblue;
+}
+.nav_span:after{
+top: -10px;
+left: 0;
+}
+.nav_span:before{
+    top: 10px;
+    right: 0;
+}
+
+
+
+.header_img{
+    width: 40px;
+    height: 40px;
+    top: 0;
+    position: absolute;
+    right: 10px;
+    background-image: url("images/RainDropLogoSVG.svg");
+    background-position: center center;
+    background-size: 30px;
+    background-repeat: no-repeat; 
+}
+
+
+.header_rd{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+
+}
+
+.header_rd p{
+    text-align: center;
+    width: 100vw;
+       margin-top: 5px;
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+.menu_burger_containter{
+    display: block;position: absolute;
+    z-index: 100;
+    top: 40px;
+    width: 100vw;
+    height: 300px;
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*make_profile*/
 
 
 
