@@ -63,11 +63,8 @@ only screen and ( min-resolution: 1.25dppx) {
     overflow-y: scroll;
     background-size: 100% 100%;
 background-image: none;
-background: #83dfe2;
-background: -moz-linear-gradient(top, #83dfe2 0%, #328fc1 100%);
-background: -webkit-linear-gradient(top, #83dfe2 0%,#328fc1 100%);
-background: linear-gradient(to bottom, #83dfe2 0%,#328fc1 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83dfe2', endColorstr='#328fc1',GradientType=0 );
+background: #fff;
+
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #eee;
@@ -523,9 +520,10 @@ font-size: 11px;
     left: 6px;
 
 }
-.registration_submit_a a input{
+.registration_submit_a a input,.login_submit_a a input{
     width: 90vw;
 }
+
 .terms_service_wraper{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -822,11 +820,72 @@ opacity: 0.6;
     margin: 0;
     bottom: 0;
     left: 0;
+    box-shadow: 0 -30px 50px 10px #fff;
+    box-sizing: border-box;
     padding: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+.bm_container:before{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 200vw;
+    z-index: 10000;
+    height:2px;
+    background-repeat: repeat-x;
+    background: rgba(65,209,209,1);
+background: -moz-linear-gradient(left, rgba(65,209,209,1) 0%, rgba(65,179,68,1) 51%, rgba(65,209,209,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(65,209,209,1)), color-stop(51%, rgba(65,179,68,1)), color-stop(100%, rgba(65,209,209,1)));
+background: -webkit-linear-gradient(left, rgba(65,209,209,1) 0%, rgba(65,179,68,1) 51%, rgba(65,209,209,1) 100%);
+background: -o-linear-gradient(left, rgba(65,209,209,1) 0%, rgba(65,179,68,1) 51%, rgba(65,209,209,1) 100%);
+background: -ms-linear-gradient(left, rgba(65,209,209,1) 0%, rgba(65,179,68,1) 51%, rgba(65,209,209,1) 100%);
+background: linear-gradient(to right, rgba(65,209,209,1) 0%, rgba(65,179,68,1) 51%, rgba(65,209,209,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41d1d1', endColorstr='#41d1d1', GradientType=1 );
+
+animation: bm_border_animation_before 1000ms infinite;
+}
+.bm_container:after{
+    content: "";
+    top: 0;
+    left: -100vw;
+    position: absolute;
+    width: 200vw;
+    z-index: 10000;
+    height: 2px;
+    background-repeat: repeat-x;
+    background: rgba(65,209,209,1);
+background: -moz-linear-gradient(left, rgba(65,209,209,1) 0%, rgba(65,179,68,1) 51%, rgba(65,209,209,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(65,209,209,1)), color-stop(51%, rgba(65,179,68,1)), color-stop(100%, rgba(65,209,209,1)));
+background: -webkit-linear-gradient(left, rgba(65,209,209,1) 0%, rgba(65,179,68,1) 51%, rgba(65,209,209,1) 100%);
+background: -o-linear-gradient(left, rgba(65,209,209,1) 0%, rgba(65,179,68,1) 51%, rgba(65,209,209,1) 100%);
+background: -ms-linear-gradient(left, rgba(65,209,209,1) 0%, rgba(65,179,68,1) 51%, rgba(65,209,209,1) 100%);
+background: linear-gradient(to right, rgba(65,209,209,1) 0%, rgba(65,179,68,1) 51%, rgba(65,209,209,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41d1d1', endColorstr='#41d1d1', GradientType=1 );
+
+animation: bm_border_animation_after 1000ms infinite;
+}
+@keyframes bm_border_animation_before{
+    0%,100%{
+        left: 0;
+    }
+    50%{
+        left: 100vw;
+    }
+}
+
+@keyframes bm_border_animation_after{
+    0%,100%{
+        left: -100vw;
+    }
+    50%{
+        left: 0;
+    }
+}
+
+
 .bm_container a{
     color: gray;
     text-decoration:none;
@@ -902,7 +961,7 @@ header{
     height: 40px;
     position: fixed;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.79);
+    background-color: rgba(0, 0, 0, 0.89);
     top: 0;
     left: 0;
 }
@@ -918,34 +977,69 @@ header{
     justify-content: center;
     align-items: center;
     }
+
+
+
+/*Habmurger*/
 .nav_span{
 width: 30px;
 height: 3px;
 border-radius: 2px;
-background: skyblue;
+background: #27e8d6;
 position: relative;
 
+
+ transition:all 200ms ease;
 }
 .nav_span:before,.nav_span:after{
     position: absolute;
     
     width: 20px;
     content: "";
-
+transition:all 400ms ease;
     height: 3px;
     border-radius: 2px;
-    background: skyblue;
+    background: #27e8d6;
 }
 .nav_span:after{
-top: -10px;
-left: 0;
+top: -8px;
+left: 2px; 
 }
 .nav_span:before{
-    top: 10px;
-    right: 0;
+    top: 8px;
+    right: 2px; 
+}
+
+.nav_span.nav_active{
+     transition:all 200ms ease;
+    width: 0px;
+}
+.nav_span.nav_active:before{
+    transition:all 400ms ease;
+    width: 30px;transform: rotate(45deg);
+    right: -15px;top:0px;
+}
+.nav_span.nav_active:after{
+    transition:all 400ms ease;
+    width: 30px;transform: rotate(-45deg);
+    left: -15px;
+    top:0px;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*Habmurger*/
 
 .header_img{
     width: 40px;
@@ -977,18 +1071,130 @@ left: 0;
 }
 
 .menu_burger_containter{
-    display: block;position: absolute;
+    display: none;    
+    position: fixed;
     z-index: 100;
     top: 40px;
     width: 100vw;
     height: 300px;
-    background-color: red;
+    background-color: black;
 }
 
 
 
+.main_page_title_container{
+    position: relative;
+    height:60px;
+
+}
+.main_page_title,.job_count{
+    text-align: center;
+    color: #333;
+    font-size: 25px; font-family: "Open Sans", sans-serif;
+
+}
+.job_title_page{
+    text-align: left;
+    position: absolute;
+   left: 50px;
+margin-top: 10px;
+
+}
+.job_count{
+    position: absolute;
+     text-align: right;
+    right: 30px;
+    top: 15px;
+    font-size: 14px; 
+
+}
+
+/*Job_container_for_react*/
 
 
+
+.all_job_container{
+    width: 100vw;
+    height: initial;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.job_container{
+    width: 95vw;
+    height: initial;
+    box-shadow: 0px 2px 4px 0px rgb(122, 118, 118);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    background-color: #fff;
+}
+.job_text{
+    width: 70%;
+    height: inherit;
+    
+
+}
+.job_image_container{
+    width: 30%;
+    height: inherit;
+    
+}
+.job_image{
+    width: auto;
+height: auto;
+max-height: 60px;
+max-width: 90%;
+float: right;
+margin-right: 10px;
+}
+
+
+.job_title,.job_sallary,.job_date,.job_location{
+text-align: center;
+margin: 0;
+
+
+text-align: left;
+    padding-left: 10px;
+}
+.job_title{
+    font-family: "Open Sans", sans-serif;
+font-weight: bold;
+font-size: 16px;
+color: #1a767d;
+
+}
+.job_sallary{
+    color: #333;
+    font-size: 14px;
+    font-style: italic;
+}
+.job_location{
+     font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #888;
+}
+.job_date{
+    text-align: right;
+    padding-right: 10px;
+    font-size: 12px;
+    font-style: italic;color: #888;
+
+}
+.job_link_a{
+    text-decoration:none;
+    outline: none;
+
+}
+/*Job_container_for_react*/
 
 
 

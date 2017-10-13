@@ -26,7 +26,7 @@ $(function () {
 
 
 	$("#validation_message").hide();
-
+$("#hidden_log_button").hide();
 });//doc redy
 
 
@@ -60,12 +60,14 @@ var EmailStructure = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".
 		
 $("#validation_message").html("Email is not valid");
 $("#validation_message").fadeIn();
-
+$("#hidden_log_button").hide();
+$("#submit_input").show();
 error_email = true;
 	}else{
 		$(".span_after_email").addClass('ok_tick_is_visible');
-	
+	$("#hidden_log_button").show();
 $("#validation_message").hide();
+$("#submit_input").hide();
 	}
 }
 
@@ -76,9 +78,12 @@ var pass_length = $("#password_input").val().length;
   	$(".span_after_password").removeClass('ok_tick_is_visible');
 $("#validation_message").html("Between 5 and 20 chars");
 $("#validation_message").fadeIn();
+$("#submit_input").show();
+$("#hidden_log_button").hide();
 error_pass = true;
  }else{
- 	
+ 	$("#hidden_log_button").show();
+ 	$("#submit_input").hide();
  	$(".span_after_password").addClass('ok_tick_is_visible');
 $("#validation_message").hide();
  }

@@ -8,12 +8,14 @@
 
 
     <script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
-    
+    <script src="https://fb.me/react-15.0.0.js"></script>    
+    <script src="https://fb.me/react-dom-15.0.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Didact+Gothic|Source+Sans+Pro:600" rel="stylesheet">
     <script src="jobs.js"></script>
-    
+    <script src="jobs_react.js" type="text/babel"></script>
 
   
 
@@ -33,11 +35,35 @@
 <div class="menu_burger_containter"></div>
 
 
+<div style="height: 3000px;">
+	<div style="height: 40px;"></div>
+	<div class="main_page_title_container">
+		<p class="main_page_title job_title_page">Jobs</p>
+		<p class="job_count"></p>	
+	</div>
+	
+	<!--
+<div class="all_job_container">
+	<div class="job_container">
+		<div class="job_text">
+			<p class="job_title">UX/UI designer</p>
+			<p class="job_sallary">1220 to 4555</p>
+		</div>
+
+		<div class="job_image_container">
+			<p class="job_date">today</p>
+			<img class="job_image" src="images/new_bg.png"></img>
+
+		</div>
+	</div>
+
+	
+</div> -->
+<div class="all_job_container">
+	<div id="jobs_react"></div>	
+</div>
 
 
-
-
-
-<div style="height: 3000px;"></div>
+</div>
 </body>
 </html>
