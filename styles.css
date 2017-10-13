@@ -20,6 +20,7 @@ only screen and ( min-resolution: 1.25dppx) {
     
     * {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        box-sizing: border-box;
     }
     body {
          
@@ -1018,11 +1019,13 @@ left: 2px;
     transition:all 400ms ease;
     width: 30px;transform: rotate(45deg);
     right: -15px;top:0px;
+    height: 5px;
 }
 .nav_span.nav_active:after{
     transition:all 400ms ease;
     width: 30px;transform: rotate(-45deg);
     left: -15px;
+    height: 5px;
     top:0px;
 }
 
@@ -1076,10 +1079,38 @@ left: 2px;
     z-index: 100;
     top: 40px;
     width: 100vw;
-    height: 300px;
+    height: 260px;
     background-color: black;
 }
 
+.burger_ul{
+list-style: none;
+padding: 0;
+margin: 0;
+    width: 100%;
+    height: 90%;
+    position: relative;
+}
+.burger_ul li{
+    height:40px;
+    padding-top: 7px;
+    padding-left: 34px;
+    border-bottom: 1px solid gray;
+}
+.burger_ul a{
+     text-decoration: none;
+    color: #fff;
+}
+.burger_ul:first_child{
+    height: 55px;
+    padding-top: 10px;
+    padding-left: 0;
+    text-align: center;
+}
+.burger_ul li a{
+    
+    text-align: left;
+}
 
 
 .main_page_title_container{
@@ -1194,6 +1225,64 @@ color: #1a767d;
     outline: none;
 
 }
+.loader_conateiner{
+    width: 100vw;
+height: 100vh; 
+background-color: #fff;
+display: flex;
+position: absolute;
+z-index: 10000;
+justify-content: center;
+
+}
+.pre_loader,.pre_loader:before,.pre_loader:after{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    top: 200px;
+    position: relative;
+    background-color: #777;
+}
+
+.pre_loader:before{
+content: "";
+top: 0px;
+position: absolute;
+left: -20px;
+
+}
+
+.pre_loader:after{
+content: "";
+top: 0px;
+position: absolute;
+left: 20px;
+
+}
+.pre_loader:before{
+    animation: loading 1200ms ease 0ms infinite;
+}
+.pre_loader{
+    animation: loading 1200ms ease 0ms infinite;
+}
+.pre_loader:after{
+    animation: loading 1200ms ease 0ms infinite;
+}
+@keyframes loading{
+    0%,100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+
+
+
+
+
+
 /*Job_container_for_react*/
 
 
