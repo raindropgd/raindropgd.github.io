@@ -964,7 +964,7 @@ header{
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.89);
     top: 0;
-    left: 0;
+    left: 0;z-index: 200;
 }
 
 
@@ -1017,15 +1017,15 @@ left: 2px;
 }
 .nav_span.nav_active:before{
     transition:all 400ms ease;
-    width: 30px;transform: rotate(45deg);
-    right: -15px;top:0px;
-    height: 5px;
+    width: 25px;transform: rotate(45deg);
+    right: -12.5px;top:0px;
+    
 }
 .nav_span.nav_active:after{
     transition:all 400ms ease;
-    width: 30px;transform: rotate(-45deg);
-    left: -15px;
-    height: 5px;
+    width: 25px;transform: rotate(-45deg);
+    left: -12.5px;
+    
     top:0px;
 }
 
@@ -1152,6 +1152,7 @@ margin-top: 10px;
     justify-content: center;
     
 }
+
 .job_container{
     width: 95vw;
     height: initial;
@@ -1279,19 +1280,130 @@ left: 20px;
 
 
     /*SingleJOb*/
+    .single_job_container_master{
+        position: fixed;
+z-index: 95;
+top: 40px;
+display:none;
+height: initial;
+bottom: 40px;
+
+overflow-y: scroll;
+width: 100vw;
+    }
     .single_job_wraper{
         width: 95vw;
-        height: 1000px;
+        padding-bottom: 50px;
+        height: initial;
         background-color: white;
         border-radius: 5px;
         box-shadow: 0px 2px 4px 0px rgb(122, 118, 118);
-        margin-bottom: 60px;
+        position: relative;
         display: block;
         color: black;
     }
-    /*SingleJOb*/
+    .jb_title_data{
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        color: #1a767d;
+padding: 0px 20px;
+    }
+    .jb_pic_data{
+        max-width: 70%;margin-top: 30px;
+        max-height: 100px;
+    }
+
+    .jb_details_p{
+
+        margin: 0;
+        font-size: 15px;
+        font-style: italic;
+        color: #565555;
+
+        padding-left: 10px;
+
+     }
+     .jb_details_span{
+        color: #222; font-weight: bold;
+     }
+     .jb_section{
+    padding-left: 30px;
+    font-size: 18px;
+    color: #10484d;
+    font-style: italic;
+    font-weight: bold;
+
+     }
+     .jb_section_data{
+        text-align: justify;
+        padding:0px  20px;
+        font-size: 16px;
+        color: #444;
+
+     }
+    .jb_hr{
+        width: 90%;
+        border-top: 1px solid #999;
+        border-bottom: none;
+    }
+.jb_apply_btn{
+    width: 70%;
+    
+}
 
 
+.jb_return_btn{
+    position: fixed;
+background-color: rgba(0,0,0,0.9);
+border-radius: 50px;
+width: 50px;
+height: 50px;
+color: #27e8d6;
+bottom: 8vh;
+left: 8vw;
+z-index: 1002;
+filter: drop-shadow(0 3px 2px rgba(0,0,0,0.9));
+border: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+        .jb_return_btn span{
+            position: relative;
+            font-size: 27px;
+            margin-top:  -7px;
+
+        }
+        .jb_return_btn span:before{
+            content: "";
+            position: absolute;
+            
+
+        }
+.jb_return_message{
+    position: fixed;
+    bottom: 9.5vh;
+    left: 30vw;
+    font-size: 16px;
+    font-weight: bold;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+    border-radius: 5px;
+    background:white;
+    
+    color: #2fb0a4;z-index: 200;
+    padding: 5px 10px;
+    animation: move_side_to_side 800ms linear 0s infinite;
+}
+@keyframes move_side_to_side{
+    0%,100%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+}
+/*SingleJOb*/
 
 
 /*Job_container_for_react*/

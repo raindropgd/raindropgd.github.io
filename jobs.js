@@ -3,7 +3,7 @@ $(function () {
 	jQuery(document).ready(function($) {
 		$(".loader_conateiner").fadeOut();
 		$(".hamburger_nav").click(function(event) {
-			$(".menu_burger_containter").slideToggle();
+			$(".menu_burger_containter").toggle();
 		});
 
 
